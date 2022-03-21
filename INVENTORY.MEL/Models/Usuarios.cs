@@ -18,14 +18,11 @@ namespace INVENTORY.MODEL.Models
         public string Usuario { get; set; }
 
         [Required]
-        [MaxLength(50)]
         public string Clave { get; set; }
 
         [Required]
         [MaxLength(50)]
         public string Perfil { get; set; }
-
-        [Required]
         public string Foto { get; set; }
 
         [Required]
@@ -38,7 +35,7 @@ namespace INVENTORY.MODEL.Models
 
         [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/mm/yyyy}")]
         public DateTime Fecha { get; set; }
 
         public virtual ICollection<Ventas> Ventas { get; set; }
